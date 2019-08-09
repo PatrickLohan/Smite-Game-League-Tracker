@@ -1,6 +1,6 @@
 ### Sports Scoring App
 
-As a huge fan of [pick a sport], your client would want to stay up to date with the league. They're interested to see which team leads the table and who won the latest games/matches/fixtures/bouts/…
+As a huge fan of SMITE, your client would want to stay up to date with the league. They're interested to see which team leads the table and who won the latest games/matches/fixtures/bouts/…
 
 ##### Caution
 
