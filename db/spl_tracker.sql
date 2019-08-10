@@ -1,5 +1,5 @@
-DROP TABLE leagues;
 DROP TABLE teams;
+DROP TABLE leagues;
 
 CREATE TABLE leagues (
   id SERIAL PRIMARY KEY,
@@ -9,5 +9,5 @@ CREATE TABLE leagues (
 CREATE TABLE teams (
   id SERIAL PRIMARY KEY,
   team_name VARCHAR(255),
-  league_id INT REFERENCES leagues(id)
+  league_id INT REFERENCES leagues(id) ON DELETE CASCADE
 );

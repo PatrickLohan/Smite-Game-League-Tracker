@@ -1,0 +1,11 @@
+<h2>The teams</h2>
+<hr />
+<% for team in @teams %>
+  <p>
+    Team Name: <%= team.team_name %>
+  </p>
+  <p>
+    <a href="/teams/<%= team.id %>">Goto</a>
+  </p>
+  <hr/>
+  <% end %>
