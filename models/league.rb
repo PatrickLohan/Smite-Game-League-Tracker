@@ -24,5 +24,17 @@ class League
     SqlRunner.run(sql)
   end
 
+  def self.map_items(league_data)
+    return league_data.map { |league| League.new(league) }
+  end
+
+  def self.all()
+    sql = "SELECT * FROM leagues"
+    league_data = SqlRunner.run(sql)
+    leagues = map_items(league_data)
+    return leagues
+  end
+
+
 
 end

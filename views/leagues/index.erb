@@ -1,0 +1,11 @@
+<h2>The leagues</h2>
+<hr />
+<% for league in @leagues %>
+  <p>
+    League Name: <%= league.league_name %>
+  </p>
+  <p>
+    <a href="/leagues/<%= league.id %>">Goto</a>
+  </p>
+  <hr/>
+<% end %>
