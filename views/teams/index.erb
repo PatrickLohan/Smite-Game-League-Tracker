@@ -1,5 +1,16 @@
 <h2>The teams</h2>
 <hr />
+<nav>
+  <ul>
+    <li>
+      <a href="/teams/new">Add Team</a>
+    </li>
+    <!-- <li>
+         <a href="/teams/edit"></a>
+         </li> -->
+  </ul>
+</nav>
+<hr/>
 <% for team in @teams %>
   <p>
     Team Name: <%= team.team_name %>

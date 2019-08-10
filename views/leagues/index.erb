@@ -1,5 +1,16 @@
 <h2>The leagues</h2>
 <hr />
+<nav>
+  <ul>
+    <li>
+      <a href="/leagues/new">Add League</a>
+    </li>
+    <!-- <li>
+         <a href="/leagues/edit"></a>
+         </li> -->
+  </ul>
+</nav>
+<hr/>
 <% for league in @leagues %>
   <p>
     League Name: <%= league.league_name %>
