@@ -1,5 +1,5 @@
-DROP TABLE teams;
-DROP TABLE leagues;
+DROP TABLE IF EXISTS teams;
+DROP TABLE IF EXISTS leagues;
 
 CREATE TABLE leagues (
   id SERIAL PRIMARY KEY,
