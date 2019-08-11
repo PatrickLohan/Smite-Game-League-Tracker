@@ -1,8 +1,7 @@
 require_relative('../db/sql_runner.rb')
 
 class League
-  attr_reader :id
-  attr_accessor :league_name
+  attr_accessor :league_name, :id
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
@@ -15,9 +14,7 @@ class League
     RETURNING id"
     values = [@league_name]
     result = SqlRunner.run(sql, values)
-    #why is this written .first["id"] rather than .first("id")?
-    id = result[0]['id']
-    @id = id.to_i
+    @id = result.first()['id'].to_i()
   end
 
   def delete()
@@ -32,10 +29,8 @@ class League
   end
 
   def update()
-    sql = "UPDATE leagues
-    SET (league_name) = ($1)
-    WHERE id = ($2)"
-    values = [@league_name]
+    sql = "UPDATE leagues SET (league_name) = ($1) WHERE id = $2"
+    values = [@league_name, @id]
     SqlRunner.run(sql, values)
   end
 
