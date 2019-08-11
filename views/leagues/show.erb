@@ -1,5 +1,13 @@
 <h2><%= @league.league_name %></h2>
 
+<p> Teams:   </p>
+<% for team in @league.teams_list() %>
+  <ul>
+    <li><%= team.team_name() %></li>
+  </ul>
+<% end %>
+<hr />
+
   <form action="/leagues/<%= @league.id %>/delete" method="POST">
     <input type="submit" value="Delete"/>
   </form>
