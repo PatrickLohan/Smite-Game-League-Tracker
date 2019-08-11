@@ -54,7 +54,7 @@ class League
     return league
   end
 
-  def teams()
+  def teams_list()
     sql = "SELECT * FROM teams WHERE league_id = $1"
     values = [@id]
     teams = SqlRunner.run(sql, values)

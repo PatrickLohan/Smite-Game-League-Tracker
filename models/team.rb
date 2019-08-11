@@ -22,9 +22,21 @@ class Team
     @id = id.to_i
   end
 
+  def delete()
+    sql = "DELETE FROM teams WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
   def self.delete_all()
     sql = "DELETE FROM teams"
     SqlRunner.run(sql)
+  end
+  
+  def update()
+    sql = "UPDATE teams SET team_name = $1 WHERE id = $2"
+    values = [@team_name, @id]
+    SqlRunner.run(sql, values)
   end
 
   def self.map_items(team_data)

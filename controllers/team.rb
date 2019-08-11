@@ -18,7 +18,27 @@ post '/teams' do
   redirect "/teams"
 end
 
+# DELETE
+post '/teams/:id/delete' do
+  id = params[:id].to_i
+  team = Team.find(id)
+  team.delete()
+  redirect '/teams'
+end
 
+# EDIT
+get '/teams/:id/edit' do
+  id = params[:id].to_i()
+  @team = Team.find(id)
+  erb(:"teams/edit")
+end
+
+#UPDATE
+post '/teams/:id' do
+  team = Team.new(params)
+  team.update()
+  redirect '/teams'
+end
 
 # SHOW
 get '/teams/:id' do

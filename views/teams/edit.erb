@@ -1,0 +1,8 @@
+<form action="/teams/<%=@team.id %>" method="POST">
+
+  <label for="team-name">Team Name:</label>
+  <input required name="team_name" id="team-name" type="text" value="<%= @team.team_name %>"/>
+
+  <input required type="submit" value="Update Team">
+
+</form>
