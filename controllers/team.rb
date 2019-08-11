@@ -17,3 +17,12 @@ post '/teams' do
   team.save()
   redirect "/teams"
 end
+
+
+
+# SHOW
+get '/teams/:id' do
+  id = params[:id].to_i()
+  @team = Team.find(id)
+  erb(:"teams/show")
+end

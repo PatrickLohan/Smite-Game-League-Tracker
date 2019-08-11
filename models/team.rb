@@ -38,5 +38,12 @@ class Team
     return teams
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM teams WHERE id = $1"
+    values = [id]
+    team_hash = SqlRunner.run(sql, values)[0]
+    return Team.new(team_hash)
+  end
+
 
 end
