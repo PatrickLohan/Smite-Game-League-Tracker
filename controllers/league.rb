@@ -18,11 +18,12 @@ post '/leagues' do
   redirect "/leagues"
 end
 
-# SHOW
-get '/leagues/:id' do
-  id = params[:id].to_i()
-  @league = League.find(id)
-  erb(:"leagues/show")
+# DELETE
+post '/leagues/:id/delete' do
+  id = params[:id].to_i
+  league = League.find(id)
+  league.delete()
+  redirect '/leagues'
 end
 
 # EDIT
@@ -36,13 +37,12 @@ end
 post '/leagues/:id' do
   league = League.new(params)
   league.update()
-  redirect '/leagues/index'
+  redirect '/leagues'
 end
 
-# DELETE
-post '/leagues/:id/delete' do
-  id = params[:id].to_i
-  league = League.find(id)
-  league.delete()
-  redirect '/leagues'
+# SHOW
+get '/leagues/:id' do
+  id = params[:id].to_i()
+  @league = League.find(id)
+  erb(:"leagues/show")
 end

@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner.rb')
+require_relative('./team.rb')
 
 class League
   attr_accessor :league_name, :id
@@ -29,8 +30,8 @@ class League
   end
 
   def update()
-    sql = "UPDATE leagues SET (league_name) = ($1) WHERE id = $2"
-    values = [@league_name, @id]
+    sql = "UPDATE leagues SET league_name = $1 WHERE id = $2"
+    values = [league_name, id]
     SqlRunner.run(sql, values)
   end
 
@@ -48,11 +49,17 @@ class League
   def self.find(id)
     sql = "SELECT * FROM leagues WHERE id = $1"
     values = [id]
-    league_hash = SqlRunner.run(sql, values)[0]
-    return League.new(league_hash)
+    league_hash = SqlRunner.run(sql, values).first()
+    league = League.new(league_hash)
+    return league
   end
 
-
+  def teams()
+    sql = "SELECT * FROM teams WHERE league_id = $1"
+    values = [@id]
+    teams = SqlRunner.run(sql, values)
+    return teams.map{ |team| Team.new(team) }
+  end
 
 
 end
