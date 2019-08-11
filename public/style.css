@@ -1,7 +1,44 @@
-header {
+html {
   font-family: 'MedievalSharp', cursive;
+}
+
+header img {
+  height: 80px;
 }
 
 p {
   font-family: 'Merriweather', serif;
+}
+
+nav {
+  background-color: #D99B48;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+li {
+  margin: 5px;
+  padding: 5px;
+  font-size: 2rem;
+  border-radius: 20%;
+  background-color: #A4970D;
+  color: #D99B48;
+}
+
+a {
+}
+
+a:link{
+  colour: #000;
+  text-decoration: none
+}
+
+a:hover{
+  background-color: #D99B48;
+  color: #A4970D;
 }
