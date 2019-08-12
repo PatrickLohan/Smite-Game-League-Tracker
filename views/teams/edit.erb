@@ -3,6 +3,10 @@
   <label for="team-name">Team Name:</label>
   <input required name="team_name" id="team-name" type="text" value="<%= @team.team_name %>"/>
 
-  <input required type="submit" value="Update Team">
+  <label for="team-league">League:</label>
+  <input required id="team-league" name="league_id" type="text" value="<%= @team.league_id %>>"
+
+
+  <input type="submit" value="Update Team">
 
 </form>

@@ -17,8 +17,7 @@ class Team
     RETURNING id"
     values = [@team_name, @league_id]
     result = SqlRunner.run(sql, values)
-    #why is this written .first["id"] rather than .first("id")?
-    id = result.first["id"]
+    id = result.first()["id"]
     @id = id.to_i
   end
 

@@ -1,4 +1,5 @@
 require_relative('../models/team.rb')
+require_relative('../models/league.rb')
 
 # INDEX
 get '/teams' do
