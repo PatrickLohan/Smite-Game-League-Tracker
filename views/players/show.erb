@@ -1,0 +1,14 @@
+<h2>IGN: <%= @player.game_name %></h2>
+<p>
+  Team: <%= @player.team_id %>
+</p>
+
+<p>
+  <a href="/players/<%= @player.id %>/edit">Edit</a>
+</p>
+
+<form action="/players/<%= @player.id %>/delete" method="POST">
+  <input type="submit" value="Delete"/>
+  
+</form>
+<hr/>

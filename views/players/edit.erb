@@ -1,0 +1,11 @@
+<form action="/players/<%= @player.id %>" method="POST">
+
+  <label for="game-name">IGN:
+    <input required name="game_name" type="text" value="<%= @player.game_name %>" id="game-name"/>
+  </label>
+  <label for="team-id">Team:
+    <input required name="team_id" type="number" value="<%= @player.team_id %>"/>
+  </label>
+
+  <input type="submit" value="Update Player"/>
+</form>

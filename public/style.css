@@ -1,17 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   font-family: 'MedievalSharp', cursive;
+  background-color: #D2D2D2;
+  /* background-image: url("/images/yggdrasil.jpg"); */
 }
 
 header img {
-  height: 80px;
+  height: 64px;
 }
 
 p {
   font-family: 'Merriweather', serif;
+  colour: #424242;
 }
 
-.main-nav {
-  background-color: #639;
+.navbar {
+  background-color: #424242;
+  color: #D2D2D2;
 }
 
 ul {
@@ -19,31 +29,32 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  align-items: center;
 }
 
 li {
-  margin: 5px;
+  margin: 15px;
   padding: 5px;
-  font-size: 2rem;
+  font-size: 1.5em;
   border-radius: 20%;
 }
 
-.main-nav {
-  background-color: #A4970D;
-  color: #639;
+.logo {
+  display: inline-block;
+  float: left;
 }
 
 a {
-  color: #424242;
+  color: #D2D2D2;
 }
 
 a:link{
-  text-decoration: none
+  text-decoration: none;
+  color: #424242;
 }
 
 a:hover{
-  background-color: #D99B48;
-  color: #A4970D;
+  color: #f5d547;
 }
 
 a:visited {

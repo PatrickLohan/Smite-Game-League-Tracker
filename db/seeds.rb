@@ -1,6 +1,8 @@
 require_relative("../models/team.rb")
 require_relative("../models/league.rb")
+require_relative("../models/player.rb")
 
+Player.delete_all()
 League.delete_all()
 Team.delete_all()
 
@@ -29,3 +31,21 @@ team2 = Team.new(
 )
 
 team2.save()
+
+player1 = Player.new(
+  {
+    "game_name" => "PolarBearMike",
+    "team_id" => 1
+  }
+)
+
+player1.save()
+
+player2 = Player.new(
+  {
+    "game_name" => "Emilzy",
+    "team_id" => 2
+  }
+)
+
+player2.save()

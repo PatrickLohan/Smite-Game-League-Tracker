@@ -1,0 +1,19 @@
+<h2>The players</h2>
+<hr />
+<nav>
+  <ul>
+    <li>
+      <a href="/players/new">Add Player</a>
+    </li>
+  </ul>
+</nav>
+<hr/>
+<% for player in @players %>
+  <p>
+    Player Name: <%= player.game_name %>
+  </p>
+  <p>
+    <a href="/players/<%= player.id %>">Goto</a>
+  </p>
+  <hr/>
+<% end %>
