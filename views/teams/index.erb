@@ -2,13 +2,11 @@
 <hr/>
 <% for team in @teams %>
   <p>
-    Team Name: <%= team.team_name %>
-  </p>
-  <p>
-    <a href="/teams/<%= team.id %>">Goto</a>
+    <a href="/teams/<%= team.id %>"><%= team.team_name %></a>
   </p>
   <hr/>
   <% end %>
 
-<h2><a href="/teams/new">Add Team</a></h2>
-<hr/>
+<form action="/teams/new">
+  <button type="submit" value="New Team">New Team</button>
+</form>

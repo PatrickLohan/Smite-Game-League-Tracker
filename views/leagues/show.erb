@@ -3,14 +3,14 @@
 <p> Teams:   </p>
 <hr/>
 <% for team in @league.teams_list() %>
-    <h3><%= team.team_name() %></h3>
+  <h3><a href="<%= team.id %>"><%= team.team_name() %></a>
     <hr />
 <% end %>
 
 <form action="/leagues/<%= @league.id %>/edit">
-  <input type="submit" value="Edit League"/>
+  <button type="submit" value="Edit League">Edit League</button>
 </form>
 
 <form action="/leagues/<%= @league.id %>/delete" method="POST">
-  <button type="submit" value="Delete League"/>Delete League</button>
+  <button type="submit" value="Delete League">Delete League</button>
 </form>
