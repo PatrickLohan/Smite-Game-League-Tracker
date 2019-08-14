@@ -1,12 +1,13 @@
 <form action="/teams/<%= @team.id %>" method="POST">
+  <div class="flex-wrapper">
+    <label for="team-name">Team Name:</label>
+    <input required name="team_name" id="team-name" type="text" value="<%= @team.team_name %>"/>
 
-  <label for="team-name">Team Name:</label>
-  <input required name="team_name" id="team-name" type="text" value="<%= @team.team_name %>"/>
-
-  <label for="team-league">League:</label>
-  <input required id="team-league" name="league_id" type="text" value="<%= @team.league_id %>">
+    <label for="team-league">League:</label>
+    <input required id="team-league" name="league_id" type="text" value="<%= @team.league_id %>">
 
 
-  <input type="submit" value="Update Team">
+    <input type="submit" value="Update Team">
+  </div>
 
 </form>

@@ -1,12 +1,12 @@
+<h1>All Players</h1>
+<hr/>
 <% for player in @players %>
   <p>
-    Player Name: <%= player.game_name %>
-  </p>
-  <p>
-    <a href="/players/<%= player.id %>">Goto</a>
+    <a href="/players/<%= player.id %>"><%= player.game_name %></a>
   </p>
   <hr/>
 <% end %>
 
-<h2><a href="/players/new">Add Player</a></h2>
-<hr/>
+<form action="/players/new">
+  <input type="submit" value="New Player"/>
+</form>
