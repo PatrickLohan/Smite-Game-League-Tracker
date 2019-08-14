@@ -1,13 +1,3 @@
-<h2>The players</h2>
-<hr />
-<nav>
-  <ul>
-    <li>
-      <a href="/players/new">Add Player</a>
-    </li>
-  </ul>
-</nav>
-<hr/>
 <% for player in @players %>
   <p>
     Player Name: <%= player.game_name %>
@@ -17,3 +7,6 @@
   </p>
   <hr/>
 <% end %>
+
+<h2><a href="/players/new">Add Player</a></h2>
+<hr/>

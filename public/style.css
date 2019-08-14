@@ -7,7 +7,13 @@
 html {
   font-family: 'MedievalSharp', cursive;
   background-color: #D2D2D2;
-  /* background-image: url("/images/yggdrasil.jpg"); */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
 }
 
 header img {
@@ -22,6 +28,7 @@ p {
 .navbar {
   background-color: #424242;
   color: #D2D2D2;
+  margin-bottom: 50px;
 }
 
 ul {
@@ -37,6 +44,7 @@ li {
   padding: 5px;
   font-size: 1.5em;
   border-radius: 20%;
+  color: #DDD;
 }
 
 .logo {
@@ -48,15 +56,27 @@ a {
   color: #D2D2D2;
 }
 
-a:link{
-  text-decoration: none;
-  color: #424242;
-}
-
 a:hover{
   color: #f5d547;
 }
 
 a:visited {
   text-decoration: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: auto;
+  background-color: #424242;
+  color: #D2D2D2;
+}
+
+footer a:link {
+  color: #D2D2D2;
+}
+
+footer a:hover {
+  color: #f5d547;
 }

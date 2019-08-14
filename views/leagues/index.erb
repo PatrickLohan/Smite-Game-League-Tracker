@@ -1,22 +1,11 @@
-<h2>The leagues</h2>
-<hr />
-<nav class="crud-buttons">
-  <ul>
-    <li>
-      <a href="/leagues/new">Add League</a>
-    </li>
-    <!-- <li>
-         <a href="/leagues/edit"></a>
-         </li> -->
-  </ul>
-</nav>
+<h1>The leagues</h1>
 <hr/>
 <% for league in @leagues %>
   <p>
-    League Name: <%= league.league_name %>
+    <a href="/leagues/<%= league.id %>"><%= league.league_name %></a>
   </p>
-  <p>
-    <a href="/leagues/<%= league.id %>">Goto</a>
-  </p>
-  <hr/>
+  <hr />
 <% end %>
+   <form action="/leagues/new">
+     <input type="submit" value="New League"/>
+   </form>
